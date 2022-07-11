@@ -1,20 +1,33 @@
 body {
-    background-color:antiquewhite;
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
     text-align: center;
-    background-color: darkblue;
-    color:antiquewhite;
+    background: linear-gradient(to right, blue, rgb(34, 27, 69));
+    padding: 20px 10px;
+    overflow: hidden;
+    color: white;
+
 }
-/* MAIN CONTENT */
+
 main{
     display: flex;
 }
 
-.search {
-    display:block;
+.search  #searchButton{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
 }
+
+.searchBtn{
+    width: 300px;
+    height: 20px;
+}  
+
+
 #searchHistory{
     display: flex;
     flex-direction: column;
@@ -33,7 +46,7 @@ main{
 .outlook {
     width: 175px;
     height: 175px;
-    background-color:cadetblue;
+    background-color:rgb(73, 73, 98);
     margin: 10px;
     padding: 10px;
     display: inline-block;
@@ -53,9 +66,9 @@ main{
 }
 
 .btn {
-    width: 150px;
+    width: 200px;
     height: 40px;
-    margin: 15px;
+    margin: 10px;
 }
 
 .indicator {
@@ -66,3 +79,8 @@ main{
     width: 10px;
     height: 10px;
 }
+
+#newCity{
+    margin: 15pt;
+}
+
