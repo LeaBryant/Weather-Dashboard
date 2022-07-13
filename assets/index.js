@@ -71,7 +71,7 @@ function oneCall(lat, lon, city) {
 function todayWeather(city, current) {
     currentEl.innerHTML = " "
     console.log(current)
-    // create variables for the content that we need to extract from the current object
+
     var temp = current.temp;
     var wind = current.wind_speed;
     var humidity = current.humidity;
@@ -79,7 +79,7 @@ function todayWeather(city, current) {
     var iconID = current.weather[0].icon;
     var iconURL = "http://openweathermap.org/img/wn/" + iconID + "@2x.png";
 
-    //create elements for the page
+    
     var card = document.createElement("div");
     var cardBody = document.createElement("div");
     var cardHeader = document.createElement("h3");
@@ -92,7 +92,7 @@ function todayWeather(city, current) {
     var today = new Date().toLocaleDateString();
     console.log(today);
 
-    // add attributes to elements
+// elements
     card.setAttribute("class", "today");
     cardBody.setAttribute("class", "card-body");
     cardHeader.setAttribute("class", "card-title");
@@ -102,18 +102,18 @@ function todayWeather(city, current) {
     uvEl.setAttribute("class", "card-text");
     iconEl.setAttribute("class", "icon")
     iconEl.src = iconURL;
-    //add text content
+// text content
     cardHeader.textContent = city + " " + today;
     cardHeader.append(iconEl);
-    tempEl.textContent = "temp: " + temp + " °F";
-    windEl.textContent = "wind speed: " + wind + " mph";
-    humidityEl.textContent = "humidity: " + humidity + " %";
-    uvEl.textContent = "uv index: ";
+    tempEl.textContent = "Temp: " + temp + " °F";
+    windEl.textContent = "Wind Speed: " + wind + " mph";
+    humidityEl.textContent = "Humidity: " + humidity + " %";
+    uvEl.textContent = "UV Index: ";
     uvIndicatorEl.textContent = uv;
     console.log(uv);
-    //function to style uv
+
     uvIndicator(uv, uvIndicatorEl);
-    //append elements to parents
+// elements to parents
     uvEl.append(uvIndicatorEl);
     cardBody.append(cardHeader, tempEl, windEl, humidityEl, uvEl);
     card.append(cardBody);
@@ -140,7 +140,7 @@ function fiveDay(daily) {
     forecastEl.innerHTML = " "
     console.log(daily);
 
-    //create loop to generate 5 days of content
+//Generate 5 days of content
     for (i = 1; i < 6; i++) {
         var dailyTemp = daily[i].temp.day
         var dailyWind = daily[i].humidity
@@ -159,16 +159,15 @@ function fiveDay(daily) {
         cardTwo.setAttribute("class", "outlook")
         cardBodyTwo.setAttribute("class", "card-body")
         cardHeaderTwo.setAttribute("class", "card-title")
-        tempElTwo.setAttribute("class", "card-text")
+         tempElTwo.setAttribute("class", "card-text")
         windElTwo.setAttribute("class", "card-text")
         humidityElTwo.setAttribute("class", "card-text")
         iconElTwo.src = dailyIconURL
         iconElTwo.setAttribute("class", "icon")
 
-        cardHeaderTwo.textContent = "date"
-        tempElTwo.textContent = "temp: " + dailyTemp + " °F"
-        windElTwo.textContent = "wind speed: " + dailyWind + " mph"
-        humidityElTwo.textContent = "humidity: " + dailyHumidity + " %"
+        tempElTwo.textContent = "Temp: " + dailyTemp + " °F"
+        windElTwo.textContent = "Wind Speed: " + dailyWind + " mph"
+        humidityElTwo.textContent = "Humidity: " + dailyHumidity + " %"
 
         cardBodyTwo.append(cardHeaderTwo, iconElTwo, tempElTwo, windElTwo, humidityElTwo)
         cardTwo.append(cardBodyTwo);

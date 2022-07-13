@@ -1,23 +1,25 @@
 body {
     background-color:white;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 50px;
+    box-sizing: border-box;
+
 }
 
 header {
-    text-align: center;
     background: linear-gradient(to right, blue, rgb(34, 27, 69));
-    padding: 20px 10px;
     overflow: hidden;
     color: white;
-
+    text-align: center;
+    padding: 50px;
 }
 
 main{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .search  #searchButton{
-    margin: 15px;
     display: flex;
     flex-direction: column;
 }
@@ -35,26 +37,31 @@ main{
 
 .today {
     border-style: solid;
-    border-color: grey;
-    margin-left: 25px;
+    border-width: 5pt;   
+    border-color: black;
+    box-sizing: content-box;
 }
 
 .today, #forecast {
-    padding-left: 15px ;
+    padding-left: 10px ;
 }
 
 .outlook {
-    width: 175px;
-    height: 175px;
-    background-color:rgb(73, 73, 98);
-    margin: 10px;
-    padding: 10px;
-    display: inline-block;
+    width: 185px;
+    height: 270px;
+    background-color:rgba(42, 53, 100, 0.943);
+    margin: 5px;
+    display: inline-flex;
+    color: white;
+    padding-left: 10px ;
+    border-style: solid;
+    border-width: 5pt;   
+    border-color: black;
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
 }
 
 .card-text {
@@ -66,21 +73,26 @@ main{
 }
 
 .btn {
-    width: 200px;
-    height: 40px;
-    margin: 10px;
+    border: 10px solid black;
 }
 
 .indicator {
-    background-color: chartreuse;
+    background-color: rgb(149, 178, 120);
 }
 
 .uvIndicator {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
 }
 
 #newCity{
-    margin: 15pt;
+    width: 250px;
+    height: 40px;
+margin: 5pt;
 }
 
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
