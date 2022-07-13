@@ -9,9 +9,11 @@ CSS
 JavaScript
 
 ## Deployment & Repo
-Webpage link:
+- Webpage link: 
+    https://leabryant.github.io/06-myweatherDash/ 
 
-Repo link:
+- Repo link: 
+    https://github.com/LeaBryant/06-myweatherDash 
 
 
 ## Screenshot
