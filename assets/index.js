@@ -48,7 +48,7 @@ function userInput() {
 
 function getWeather(search) {
 
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + search + "&appid=" + apiKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + search + "&appid=" + apiKey;
     fetch(queryURL).then(function (res) {
         return res.json()
     }).then(function (data) {
