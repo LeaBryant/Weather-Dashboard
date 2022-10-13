@@ -77,7 +77,7 @@ function todayWeather(city, current) {
     var humidity = current.humidity;
     var uv = current.uvi;
     var iconID = current.weather[0].icon;
-    var iconURL = "http://openweathermap.org/img/wn/" + iconID + "@2x.png";
+    var iconURL = "https://openweathermap.org/img/wn/" + iconID + "@2x.png";
 
     
     var card = document.createElement("div");
@@ -146,7 +146,7 @@ function fiveDay(daily) {
         var dailyWind = daily[i].humidity
         var dailyHumidity = daily[i].wind_speed
         var dailyIconID = daily[i].weather[0].icon
-        var dailyIconURL = "http://openweathermap.org/img/wn/" + dailyIconID + "@2x.png"
+        var dailyIconURL = "https://openweathermap.org/img/wn/" + dailyIconID + "@2x.png"
 
         var cardTwo = document.createElement("div")
         var cardBodyTwo = document.createElement("div")
